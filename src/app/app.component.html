@@ -4,4 +4,74 @@
     <button md-icon-button [mdMenuTriggerFor]="menu">
       <md-icon>add circle</md-icon>
     </button>
+    <md-menu #menu="mdMenu">
+        <button md-menu-item>
+        <md-icon>fingerprint</md-icon>
+        <span>Login</span>
+      </button>
+        <button md-menu-item disabled>
+        <md-icon>announcement</md-icon>
+        <span>Issues</span>
+      </button>
+        <button md-menu-item>
+        <md-icon>notifications_off</md-icon>
+        <span>Disable alerts</span>
+      </button>
+    </md-menu>
+</md-toolbar>
+
+<div class="flex-container" fxLayout="row" fxLayoutAlign="center center">
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+    <div class="flex-item"></div>
+</div>
+
+<md-card class="example-card">
+    <!--<md-title-group>
+        <md-card-title>
+            Furry Member
+        </md-card-title>
+        <md-card-subtitle>
+            Profesional Kitten
+        </md-card-subtitle>
+        <div md-card-avatar class="example-header-image"></div>
+    </md-title-group>-->
+    <md-card-header>
+        <div md-card-avatar class="example-header-image"></div>
+        <md-card-title>
+            Furry Member
+        </md-card-title>
+        <md-card-subtitle>
+            Profesional Kitten
+        </md-card-subtitle>
+    </md-card-header>
+    <img md-card-image src="./../assets/members/member-org.jpg">
+    <md-card-content>
+        <p>
+            Progressive Web App (PWA) is a term used to denote a new software development methodology. Unlike traditional applications, progressive web apps are a hybrid of regular web pages (or websites) and a mobile application. This new application model attempts
+            to combine features offered by most modern browsers with the benefits of mobile experience.
+        </p>
+    </md-card-content>
+    <md-card-actions>
+        <button md-button>
+          <md-icon>chat</md-icon>Chat with Furry</button>
+        <button md-button>
+          <md-icon>share</md-icon>Send Furry a refferal</button>
+    </md-card-actions>
+</md-card>
+
+<md-card *ngFor="let item of items | async">
+    <img md-card-image src="{{ item.img }}">
+    <md-card-content>
+        <p>{{ item.description }}</p>
+    </md-card-content>
+</md-card>
+
+
+<md-toolbar color="primary">
+    <span>{{title}}</span>
+    <span class="spacer"></span>
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>add circle</md-icon>
+    </button>
 </md-toolbar>
