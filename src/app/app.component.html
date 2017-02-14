@@ -1,81 +1,28 @@
 <app-header></app-header>
 
-<div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center center">
-    <md-grid-list cols="2" class="flex-container">
-        <div class="flex-item">
-            <md-grid-tile>1</md-grid-tile>
-        </div>
-        <div class="flex-item">
-            <md-grid-tile>1</md-grid-tile>
-        </div>
-        <div class="flex-item">
-            <md-grid-tile>1</md-grid-tile>
-        </div>
-        <div class="flex-item">
-            <md-grid-tile>1</md-grid-tile>
-        </div>
-    </md-grid-list>
-</div>
+<app-member></app-member>
 
-
-<div class="flex-container">
-    <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutAlign="center center">
-        <div class="flex-item">
-            <app-member></app-member>
-
-
-        </div>
-        <div class="flex-item">
-
-            <app-member></app-member>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<!--
-<md-card class="card-demo">
-    <md-card-title>Responsive Layout Directions</md-card-title>
-    <md-card-subtitle>Layout direction changes to 'column' for 'xs' or 'sm' viewport sizes:</md-card-subtitle>
-    <md-card-content>
-        <div class="containerX">
-            <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex class="coloredContainerX box">
-                <div fxFlex> I'm above on mobile, and to the left on larger devices. </div>
-                <div fxFlex> I'm below on mobile, and to the right on larger devices. </div>
-            </div>
-        </div>
-    </md-card-content>
-</md-card>
-
-<div class="flex-container" fxLayout="row" fxLayoutAlign="center center">
-    <div class="flex-item">
-
-    </div>
-    <div class="flex-item">
-        <app-member></app-member>
-    </div>
-    <div class="flex-item">
-
-    </div>
-</div>
+<!--<md-card fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutWrap>
 
 
 
-<md-card *ngFor="let item of items | async">
-    <img md-card-image src="{{ item.img }}">
-    <md-card-content>
-        <p>{{ item.description }}</p>
-    </md-card-content>
-</md-card>
+    <md-card *ngFor="let item of items | async" fxFlex="50">
+        <md-card-header>
+            <md-card-title>
+                <h5>{{ item.name }}</h5>
+            </md-card-title>
+            <img md-card-avatar src="{{ item.img }}">
+        </md-card-header>
+        <img md-card-image src="{{ item.img }}">
+        <md-card-content>
+            <h5><small>{{ item.phone }}</small></h5>
+            <p>email: {{ item.email }}</p>
+        </md-card-content>
 
+        <md-card-actions>
+            <button md-button><md-icon>chat</md-icon> Chat with {{ item.name }}</button>
+            <button md-button><md-icon>share</md-icon> Send {{ item.name }} a refferal</button>
+        </md-card-actions>
+    </md-card>
 
-<md-toolbar color="primary">
-    <span>{{title}}</span>
-    <span class="spacer"></span>
-    <button md-icon-button [mdMenuTriggerFor]="menu">
-      <md-icon>add circle</md-icon>
-    </button>
-</md-toolbar>-->
+</md-card>-->

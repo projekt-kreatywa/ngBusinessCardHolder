@@ -1,4 +1,29 @@
-<md-card class="example-card">
+<md-card fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxLayoutWrap>
+
+
+
+    <md-card *ngFor="let item of items | async" fxFlex="50">
+        <md-card-header>
+            <md-card-title>
+                <h5>{{ item.name }}</h5>
+            </md-card-title>
+            <img md-card-avatar src="{{ item.img }}">
+        </md-card-header>
+        <img md-card-image src="{{ item.img }}">
+        <md-card-content>
+            <h5><small>{{ item.phone }}</small></h5>
+            <p>email: {{ item.email }}</p>
+        </md-card-content>
+
+        <md-card-actions>
+            <button md-button><md-icon>chat</md-icon> Chat with {{ item.name }}</button>
+            <button md-button><md-icon>share</md-icon> Send {{ item.name }} a refferal</button>
+        </md-card-actions>
+    </md-card>
+
+</md-card>
+
+<!--<md-card class="example-card">
     <md-card-header>
         <div md-card-avatar class="example-header-image"></div>
         <md-card-title>
@@ -21,4 +46,4 @@
         <button md-button>
           <md-icon>share</md-icon>Send Furry a refferal</button>
     </md-card-actions>
-</md-card>
+</md-card>-->
